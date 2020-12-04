@@ -4,5 +4,9 @@ with open('games.json', 'r', encoding='utf-8') as f:
     games = json.load(f)
     # print(games)
 
-for txt in games['gameList']:
-    print('Назва гри - ', txt['gameName'], '\n', 'Кількість гравців - ', txt['playersNumber'], '\n', 'Тип гри - ', txt['gameType'], '\n', 'Наявність інвентаря - ', txt['inventory'], '\n', 'Місце для гри - ', txt['location'], '\n')
+for game in games['gameList']:
+    print('Назва гри - ', game['gameName'], '\n')
+    print('Кількість гравців - ', game['playersNumber'], '\n')
+    print('Тип гри - ', game['gameType'], '\n')
+    print('Наявність інвентаря - ', game['inventory'], '\n')
+    print('Місце для гри - ', game['location'], '\n')
