@@ -3,30 +3,30 @@
     {
       "gameName": "Восьминіжка",
       "minPlayersNumber": "4",
-      "gameType": "Активна",
-      "inventory": "Нема",
-      "location": "Байдуже"
+      "gameType": "активна",
+      "inventory": "нема",
+      "location": "байдуже"
     },
     {
       "gameName": "Лава",
       "minPlayersNumber": "2",
-      "gameType": "Активна",
-      "inventory": "Паперові листки",
-      "location": "Байдуже"
+      "gameType": "активна",
+      "inventory": "канцелярія",
+      "location": "байдуже"
     },
     {
       "gameName": "Врятувати чоловічка",
       "minPlayersNumber": "2",
-      "gameType": "Активна",
-      "inventory": "Скотч, крейда",
-      "location": "Байдуже"
+      "gameType": "пасивна",
+      "inventory": "підручні",
+      "location": "байдуже"
     },
     {
       "gameName": "Лабіринт",
       "minPlayersNumber": "4",
-      "gameType": "Активна",
-      "inventory": "Все чим можна скласти дві лінії",
-      "location": "Байдуже"
+      "gameType": "активна",
+      "inventory": "канцелярія",
+      "location": "байдуже"
     }
   ]
 }
