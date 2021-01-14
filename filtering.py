@@ -29,6 +29,6 @@ def filter_by_location(gamesList, needed_location):
 
 def final_filter(gamesList, needed_data):
     filtered_games = filter_by_players_count(gamesList, needed_data[0])
-    filtered_games = filter_by_inventory(filtered_games1, needed_data[1])
-    filtered_games = filter_by_location(filtered_games2, needed_data[2])
+    filtered_games = filter_by_inventory(filtered_games, needed_data[1])
+    filtered_games = filter_by_location(filtered_games, needed_data[2])
     return filtered_games
