@@ -3,30 +3,74 @@
     {
       "gameName": "Восьминіжка",
       "minPlayersNumber": "4",
-      "gameType": "активна",
       "inventory": "нема",
-      "location": "байдуже"
+      "location": "байдуже",
+      "description": "",
+      "url": ""
     },
     {
       "gameName": "Лава",
       "minPlayersNumber": "2",
-      "gameType": "активна",
       "inventory": "канцелярія",
-      "location": "байдуже"
+      "location": "байдуже",
+      "description": "",
+      "url": ""
     },
     {
       "gameName": "Врятувати чоловічка",
       "minPlayersNumber": "2",
-      "gameType": "пасивна",
       "inventory": "підручні",
-      "location": "байдуже"
+      "location": "байдуже",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Прірва",
+      "minPlayersNumber": "4",
+      "inventory": "підручні",
+      "location": "байдуже",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Пірамідка",
+      "minPlayersNumber": "3",
+      "inventory": "канцелярія",
+      "location": "всередині",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Пінак",
+      "minPlayersNumber": "5",
+      "inventory": "підручні",
+      "location": "зовні",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Багатоніжка",
+      "minPlayersNumber": "3",
+      "inventory": "підручні",
+      "location": "байдуже",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Розетка",
+      "minPlayersNumber": "4",
+      "inventory": "нема",
+      "location": "зовні",
+      "description": "",
+      "url": ""
     },
     {
       "gameName": "Лабіринт",
       "minPlayersNumber": "4",
-      "gameType": "активна",
       "inventory": "канцелярія",
-      "location": "байдуже"
+      "location": "байдуже",
+      "description": "",
+      "url": ""
     }
   ]
 }

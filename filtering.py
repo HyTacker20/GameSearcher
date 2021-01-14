@@ -1,40 +1,34 @@
 def filter_by_players_count(gamesList, needed_player):
-    good_games1 = []
+    filtered_games = []
 
     for game in gamesList :
-        if needed_player >= game['minPlayersNumber']:
-            good_games1.append(game)
+        if needed_player >= int(game['minPlayersNumber']):
+            filtered_games.append(game)
 
-    return good_games1
+    return filtered_games
 
 
 def filter_by_inventory(gamesList, needed_inventory):
-    good_games2 = []
+    filtered_games = []
 
     for game in gamesList :
         if needed_inventory == game['inventory']:
-            good_games2.append(game)
+            filtered_games.append(game)
 
-    return good_games2
-
-
-def filter_by_type(gamesList, needed_type):
-    good_games3 = []
-
-    for game in gamesList :
-        if needed_type == game['gameType']:
-            good_games3.append(game)
-
-    return good_games3
+    return filtered_games
 
 
 def filter_by_location(gamesList, needed_location):
-    good_games4 = []
+    filtered_games = []
 
     for game in gamesList :
         if needed_location == game['location'] or game['location'] == 'байдуже':
-            good_games4.append(game)
-        # elif game['gameLocation'] == 'байдуже':
+            filtered_games.append(game)
 
+    return filtered_games
 
-    return good_games4
+def final_filter(gamesList, needed_data):
+    filtered_games1 = filter_by_players_count(gamesList, needed_data[0])
+    filtered_games2 = filter_by_inventory(filtered_games1, needed_data[1])
+    filtered_games3 = filter_by_location(filtered_games2, needed_data[2])
+    return filtered_games3
