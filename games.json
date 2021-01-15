@@ -2,31 +2,75 @@
    "gameList": [
     {
       "gameName": "Восьминіжка",
-      "playersNumber": "4",
-      "gameType": "Активна",
-      "inventory": "Нема",
-      "location": "Байдуже"
+      "minPlayersNumber": "4",
+      "inventory": "нема",
+      "location": "байдуже",
+      "description": "",
+      "url": ""
     },
     {
       "gameName": "Лава",
-      "playersNumber": "2+",
-      "gameType": "Активна",
-      "inventory": "Паперові листки",
-      "location": "Байдуже"
+      "minPlayersNumber": "2",
+      "inventory": "канцелярія",
+      "location": "байдуже",
+      "description": "",
+      "url": ""
     },
     {
       "gameName": "Врятувати чоловічка",
-      "playersNumber": "2+",
-      "gameType": "Активна",
-      "inventory": "Скотч, крейда",
-      "location": "Байдуже"
+      "minPlayersNumber": "2",
+      "inventory": "підручні",
+      "location": "байдуже",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Прірва",
+      "minPlayersNumber": "4",
+      "inventory": "підручні",
+      "location": "байдуже",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Пірамідка",
+      "minPlayersNumber": "3",
+      "inventory": "канцелярія",
+      "location": "всередині",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Пінак",
+      "minPlayersNumber": "5",
+      "inventory": "підручні",
+      "location": "зовні",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Багатоніжка",
+      "minPlayersNumber": "3",
+      "inventory": "підручні",
+      "location": "байдуже",
+      "description": "",
+      "url": ""
+    },
+    {
+      "gameName": "Розетка",
+      "minPlayersNumber": "4",
+      "inventory": "нема",
+      "location": "зовні",
+      "description": "",
+      "url": ""
     },
     {
       "gameName": "Лабіринт",
-      "playersNumber": "4+",
-      "gameType": "Активна",
-      "inventory": "Все чим можна скласти дві лінії",
-      "location": "Байдуже"
+      "minPlayersNumber": "4",
+      "inventory": "канцелярія",
+      "location": "байдуже",
+      "description": "",
+      "url": ""
     }
   ]
 }
