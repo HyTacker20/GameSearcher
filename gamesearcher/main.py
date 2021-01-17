@@ -1,5 +1,7 @@
-import gamer
-import filtering
+# import gamer
+# import filtering
+from  dataaccess import gamer
+from filtering import filter
 
 games = gamer.get_games()
 
@@ -12,7 +14,7 @@ print('\n', '-----------------------------------')
 needed_data.append(str(input('Де будете грати?(всередині | зовні) - ').lower()))
 print('\n', '-----------------------------------')
 
-final_list = filtering.final_filter(games['gameList'], needed_data)
+final_list = filter.final_filter(games['gameList'], needed_data)
 
 for game in final_list:
     print('Назва гри - ', game['gameName'])
