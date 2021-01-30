@@ -16,6 +16,16 @@ keyboard3.row('канцелярія')
 keyboard3.row('підручні')
 keyboard4.row('активні','пасивні')
 
+
+    # for game in final_list:
+    #     print('Назва гри - ', game['gameName'])
+    #     print('мін. Кількість гравців', game['minPlayersNumber'])
+    #     print('Наявність інвентаря - ', game['inventory'])
+    #     print('Місце для гри - ', game['location'], '\n')
+
+
+
+
 # змінні
 number = 0
 with_inventory = 'none'

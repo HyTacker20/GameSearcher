@@ -34,8 +34,10 @@ MenuBar.add(Item1,Item2,Item3)
 @bot.message_handler(regexp='Зв\'язок з розробниками')
 def Menu(msg):
     bot.send_message(msg.chat.id,'Що тобі треба?',reply_markup=MenuBar)
-
-@bot.message_handler(regexp='Назад')
+def Menu1(msg):
+    if msg.text == 'Назад' or msg.text == 'Наз':
+        hoh =
+@bot.message_handler(regexp='Назад' or 'Наз')
 def Menu(msg):
     bot.send_message(msg.chat.id,'Ви повернулися назад',reply_markup=home)
 
