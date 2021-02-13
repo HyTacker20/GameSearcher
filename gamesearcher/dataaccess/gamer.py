@@ -1,7 +1,7 @@
 import json
 import logging
 
-logger = logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
 logging.basicConfig(level = logging.INFO)
 def get_games():
 
