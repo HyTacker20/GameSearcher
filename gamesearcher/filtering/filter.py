@@ -4,19 +4,29 @@ logger = logging.getLogger(__name__)
 
 def filter_by_players_count(gamesList, needed_player):
     filtered_games = []
+    needed_player = str(needed_player)
+    if needed_player.isdigit():
+        needed_player = int(needed_player)
+        for game in gamesList :
+            if needed_player >= int(game['minPlayersNumber']):
+                filtered_games.append(game)
+    else:
+        needed_player = 0
+        for game in gamesList :
+            if needed_player >= int(game['minPlayersNumber']):
+                filtered_games.append(game)
 
-    for game in gamesList :
-        if needed_player >= int(game['minPlayersNumber']):
-            filtered_games.append(game)
     # logger.info('%s games after filtering by player numbers', len(filtered_games))
     return filtered_games
 
 
 def filter_by_inventory(gamesList, needed_inventory):
     filtered_games = []
-
+    needed_inventory = str(needed_inventory)
+    if needed_inventory.isdigit():
+        needed_inventory = 'error'
     for game in gamesList :
-        if needed_inventory == game['inventory']:
+        if needed_inventory.lower() == game['inventory'].lower():
             filtered_games.append(game)
     # logger.info('%s games after filtering by game inventory', len(filtered_games))
     return filtered_games
@@ -24,15 +34,15 @@ def filter_by_inventory(gamesList, needed_inventory):
 
 def filter_by_location(gamesList, needed_location):
     filtered_games = []
-
+    needed_inventory = str(needed_location)
+    if needed_location.isdigit():
+        needed_location = 'error'
     for game in gamesList :
-        if needed_location == game['location'] or game['location'] == 'байдуже':
+        if needed_location.lower() == game['location'].lower() or game['location'].lower() == 'байдуже':
             filtered_games.append(game)
-    # logger.info('%s games filtering by needed location', len(filtered_games))
     return filtered_games
-def final_filter(gamesList, needed_data):
-    filtered_games = filter_by_players_count(gamesList, needed_data[0])
-    logger.info('%s games after filtering by player number', len(filtered_games))
+
+def print_info(filtered_games):
     test = ''
     for game in filtered_games:
         test += f'Назва гри - {game["gameName"]}\n' \
@@ -40,23 +50,17 @@ def final_filter(gamesList, needed_data):
         f'Наявність інвентаря - {game["inventory"]}\n' \
         f'Місце для гри - {game["location"]}\n\n'
     logger.info(test)
+
+
+def final_filter(gamesList, needed_data):
+    filtered_games = filter_by_players_count(gamesList, needed_data[0])
+    logger.info('%s games after filtering by player number', len(filtered_games))
+    print_info(filtered_games)
     filtered_games = filter_by_inventory(filtered_games, needed_data[1])
     logger.info('%s games after filtering by game inventory', len(filtered_games))
-    test1 = ''
-    for game in filtered_games:
-        test1 += f'Назва гри - {game["gameName"]}\n' \
-        f'мін. Кількість гравців {game["minPlayersNumber"]}\n ' \
-        f'Наявність інвентаря - {game["inventory"]}\n' \
-        f'Місце для гри - {game["location"]}\n\n'
-    logger.info(test1)
+    print_info(filtered_games)
     filtered_games = filter_by_location(filtered_games, needed_data[2])
     logger.info('%s games after filtering by location', len(filtered_games))
-    test2 = ''
-    for game in filtered_games:
-        test2 += f'Назва гри - {game["gameName"]}\n' \
-        f'мін. Кількість гравців {game["minPlayersNumber"]}\n ' \
-        f'Наявність інвентаря - {game["inventory"]}\n' \
-        f'Місце для гри - {game["location"]}\n\n'
-    logger.info(test2)
+    print_info(filtered_games)
     logger.info('All games filtered done\n')
     return filtered_games

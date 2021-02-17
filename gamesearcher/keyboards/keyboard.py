@@ -24,7 +24,7 @@ def menu():
 
 def inventory():
     inventory = ReplyKeyboardMarkup(resize_keyboard=True)
-    sport = KeyboardButton('Cпортивний')
+    sport = KeyboardButton('Спортивний')
     office = KeyboardButton('Канцелярія')
     hand = KeyboardButton('Підручні')
     no = KeyboardButton('Нема')
