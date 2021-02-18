@@ -1,1 +1,1 @@
-worker: python gamesearcher/main.py
+worker: python3 gamesearcher/main.py
