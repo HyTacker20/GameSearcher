@@ -1,1 +1,1 @@
-worker: python3 gamesearcher/main.py
+web: python3 gamesearcher/main.py
