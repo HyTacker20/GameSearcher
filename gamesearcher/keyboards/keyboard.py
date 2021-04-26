@@ -27,8 +27,11 @@ def inventory():
     sport = KeyboardButton('Спортивний')
     office = KeyboardButton('Канцелярія')
     hand = KeyboardButton('Підручні')
+    keyword = KeyboardButton('Ключові слова')
     no = KeyboardButton('Нема')
-    inventory.add(sport, office, hand, no)
+    inventory.row(sport, office, hand)
+    inventory.row(keyword)
+    inventory.row(no)
     return inventory
 
 def location():
@@ -37,6 +40,20 @@ def location():
     inside = KeyboardButton('У приміщенні')
     location.add(outside, inside)
     return location
+
+def keywords():
+    keywords = ReplyKeyboardMarkup(resize_keyboard=True)
+    word1 = KeyboardButton("М'яч")
+    word2 = KeyboardButton('Скотч')
+    word3 = KeyboardButton('Крейда')
+    keywords.add(word1, word2, word3)
+    return keywords
+
+def search_kw():
+    search = ReplyKeyboardMarkup(resize_keyboard=True)
+    search1 = KeyboardButton('Шукати за ключовим словом')
+    search.add(search1)
+    return search
 
 def delete():
     keyboard0 = telebot.types.ReplyKeyboardRemove()
