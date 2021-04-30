@@ -1,4 +1,6 @@
 import logging
+import re
+
 logging.basicConfig(level = logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -63,4 +65,31 @@ def final_filter(gamesList, needed_data):
     logger.info('%s games after filtering by location', len(filtered_games))
     print_info(filtered_games)
     logger.info('All games filtered done\n')
+    return filtered_games
+
+def filter_by_keyword(gameList, needed_keyword):
+    filtered_games = []
+    needed_keyword = needed_keyword.lower()
+    if needed_keyword.isdigit():
+        needed_location = 'error'
+    else:
+        for game in gameList:
+            kwInDesc = game["description"].lower()
+            index = re.search(needed_keyword, kwInDesc)
+
+            try:
+                if index.group() == needed_keyword :
+                    filtered_games.append(game)
+            except AttributeError :
+                logger.warn('Це не підходить!')
+
+    return filtered_games
+
+
+def final_filter_with_kw(gamesList, needed_data):
+    logger.info(needed_data)
+    filtered_games = filter_by_players_count(gamesList, needed_data[0])
+    logger.info('%s games after filtering by player number', len(filtered_games))
+    filtered_games = filter_by_keyword(filtered_games, needed_data[1])
+    logger.info('%s games after filtering by keyword', len(filtered_games))
     return filtered_games
