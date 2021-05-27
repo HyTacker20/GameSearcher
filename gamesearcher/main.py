@@ -140,8 +140,8 @@ def send_data(msg):
 
 @bot.message_handler(commands=['for_alex'])
 def help_alex(msg):
-    with open('data/help-alexey.mp3', 'r') as audio:
-        bot.send_audio(msg.chat.id, audio, 'Ой, Льоха, боту без тебе плохо!')
-    bot.send_message(msg.chat.id, msg1, parse_mode='markdown', reply_markup=kb.home())
+    with open('data/help-alexey.mp3', 'rb') as audio:
+        bot.send_audio(msg.chat.id, audio)
+    bot.send_message(msg.chat.id, 'Льоха, дякую за все!', parse_mode='markdown', reply_markup=kb.home())
 
 bot.polling(none_stop=True, interval=0)
