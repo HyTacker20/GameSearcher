@@ -138,4 +138,9 @@ def send_data(msg):
     else:
         bot.send_message(msg.chat.id, 'Схоже, що ми не найшли жодної гри(( Спробуй інші параметри!', reply_markup=kb.home())
 
+@bot.message_handler(commands=['for_alex'])
+def help_alex(msg):
+    with open('data/help-alexey.mp3', 'r') as audio:
+        bot.sendAudio(msg.chat.id, audio, 'Ой, Льоха, боту без тебе плохо!', reply_markup=kb.home())
+
 bot.polling(none_stop=True, interval=0)
