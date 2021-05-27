@@ -46,7 +46,19 @@ def keywords():
     word1 = KeyboardButton("М'яч")
     word2 = KeyboardButton('Скотч')
     word3 = KeyboardButton('Крейда')
-    keywords.add(word1, word2, word3)
+    word4 = KeyboardButton('Обруч')
+    word5 = KeyboardButton('Мотузочки')
+    word6 = KeyboardButton('Папер')
+    word7 = KeyboardButton('Стільці')
+    word8 = KeyboardButton('Команди')
+    word9 = KeyboardButton('Пари')
+    word10 = KeyboardButton('Стаканчик')
+    word11 = KeyboardButton('Резинка')
+    word12 = KeyboardButton('Картон')
+    word13 = KeyboardButton('Фломастер')
+    word14 = KeyboardButton('Нитки')
+    word15 = KeyboardButton('Кульки')
+    keywords.add(word1, word2, word3, word4, word5,word6,word7,word8,word9,word10,word11,word12,word13,word14,word15)
     return keywords
 
 def search_kw():
